@@ -1,0 +1,14 @@
+_build/
+deps/
+node_modules/
+.git/
+.gitignore
+*.md
+.env
+*.log
+priv/static/assets/
+priv/static/cache_manifest.json
+*.db
+*.db-shm
+*.db-wal
+

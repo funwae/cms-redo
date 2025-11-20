@@ -1,0 +1,28 @@
+<div class="max-w-md mx-auto px-6 py-16">
+  <h1 class="text-3xl font-heading font-bold mb-8">Register</h1>
+  <.form for={%{}} action={~p"/register"} class="space-y-4">
+    <div>
+      <label class="label">
+        <span class="label-text">Name</span>
+      </label>
+      <input type="text" name="name" class="input input-bordered w-full" />
+    </div>
+    <div>
+      <label class="label">
+        <span class="label-text">Email</span>
+      </label>
+      <input type="email" name="email" class="input input-bordered w-full" />
+    </div>
+    <div>
+      <label class="label">
+        <span class="label-text">Password</span>
+      </label>
+      <input type="password" name="password" class="input input-bordered w-full" />
+    </div>
+    <button type="submit" class="btn btn-primary w-full">Register</button>
+  </.form>
+  <p class="text-center mt-4 text-sm text-base-content/70">
+    Already have an account? <a href={~p"/log-in"} class="link">Log in</a>
+  </p>
+</div>
+

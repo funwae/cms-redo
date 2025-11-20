@@ -1,0 +1,501 @@
+<div class="max-w-5xl mx-auto px-6 py-16">
+  <!-- Hero Section -->
+  <div class="text-center mb-16">
+    <h1 class="text-5xl font-heading font-bold mb-4">The CodeMySpec Method</h1>
+    <p class="text-2xl text-base-content/80 mb-6">Stop Fighting AI Drift. Control What Goes Into Context.</p>
+    <p class="text-lg text-base-content/70 max-w-3xl mx-auto">
+      The 5-phase methodology I use to build CodeMySpec with AI - from stories to production code.
+    </p>
+    <div class="flex gap-4 justify-center mt-8">
+      <a href="#manual" class="btn btn-outline">Start with Manual Process</a>
+      <a href="#automation" class="btn btn-outline">See the Automation</a>
+    </div>
+  </div>
+
+  <!-- 5 Phase Overview -->
+  <div class="mb-20">
+    <div class="flex flex-col md:flex-row items-center justify-between gap-8 mb-12">
+      <div class="text-center flex-1">
+        <div class="text-4xl mb-2">📝</div>
+        <h3 class="font-semibold mb-2">Phase 1</h3>
+        <h4 class="text-lg font-heading">User Stories</h4>
+        <p class="text-sm text-base-content/70 mt-2">Define requirements in plain English</p>
+      </div>
+      <div class="text-2xl text-base-content/50">↓</div>
+      <div class="text-center flex-1">
+        <div class="text-4xl mb-2">🗺️</div>
+        <h3 class="font-semibold mb-2">Phase 2</h3>
+        <h4 class="text-lg font-heading">Context Mapping</h4>
+        <p class="text-sm text-base-content/70 mt-2">Map stories to Phoenix contexts</p>
+      </div>
+      <div class="text-2xl text-base-content/50">↓</div>
+      <div class="text-center flex-1">
+        <div class="text-4xl mb-2">📐</div>
+        <h3 class="font-semibold mb-2">Phase 3</h3>
+        <h4 class="text-lg font-heading">Design Documents</h4>
+        <p class="text-sm text-base-content/70 mt-2">Write specifications that control AI context</p>
+      </div>
+      <div class="text-2xl text-base-content/50">↓</div>
+      <div class="text-center flex-1">
+        <div class="text-4xl mb-2">🧪</div>
+        <h3 class="font-semibold mb-2">Phase 4</h3>
+        <h4 class="text-lg font-heading">Test Generation</h4>
+        <p class="text-sm text-base-content/70 mt-2">Generate tests from design documents</p>
+      </div>
+      <div class="text-2xl text-base-content/50">↓</div>
+      <div class="text-center flex-1">
+        <div class="text-4xl mb-2">⚡</div>
+        <h3 class="font-semibold mb-2">Phase 5</h3>
+        <h4 class="text-lg font-heading">Code Generation</h4>
+        <p class="text-sm text-base-content/70 mt-2">Generate code that makes tests pass</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- The Problem: Compounding Drift -->
+  <div class="mb-20">
+    <h2 class="text-3xl font-heading font-bold mb-6">The Problem: Compounding Drift</h2>
+    <p class="text-lg mb-6">
+      AI drift compounds through reasoning layers. The farther the LLM's reasoning gets from your actual prompt,
+      the more the output drifts from your intent.
+    </p>
+
+    <div class="grid md:grid-cols-3 gap-6 mb-6">
+      <div class="card bg-base-200">
+        <div class="card-body">
+          <h3 class="card-title">Reasoning Drift</h3>
+          <p>LLM's reasoning slightly off from your intent → code generation is more off. Each inference step compounds the error.</p>
+        </div>
+      </div>
+      <div class="card bg-base-200">
+        <div class="card-body">
+          <h3 class="card-title">Documentation Drift</h3>
+          <p>Generate PRD → generate code from PRD → two layers of drift between your intent and the output.</p>
+        </div>
+      </div>
+      <div class="card bg-base-200">
+        <div class="card-body">
+          <h3 class="card-title">Process Drift</h3>
+          <p>Ask LLM to prescribe AND follow process → compounding error. Every time you ask the LLM to figure out the process, you add drift.</p>
+        </div>
+      </div>
+    </div>
+
+    <p class="text-base-content/70">
+      Every intermediate step adds drift. Every time you ask the LLM to figure out the process, you add drift.
+    </p>
+  </div>
+
+  <!-- The Solution -->
+  <div class="mb-20">
+    <h2 class="text-3xl font-heading font-bold mb-6">The Solution: Control Context</h2>
+    <p class="text-lg mb-4">
+      Remove drift by controlling exactly what goes into the LLM's context. No intermediate reasoning about requirements. No inventing process.
+    </p>
+    <div class="card bg-base-200">
+      <div class="card-body">
+        <ul class="list-disc list-inside space-y-2">
+          <li>Design documents define the specifications</li>
+          <li>Tests define the validation</li>
+          <li>LLM only generates code to match both</li>
+        </ul>
+        <p class="mt-4 font-semibold">Here's the spec, here are the tests, make them pass.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- The Five Phases - Detailed -->
+  <div class="mb-20">
+    <h2 class="text-3xl font-heading font-bold mb-8">The Five Phases</h2>
+
+    <!-- Phase 1 -->
+    <div class="mb-12">
+      <div class="flex items-center gap-4 mb-4">
+        <div class="text-4xl">📝</div>
+        <div>
+          <h3 class="text-2xl font-heading font-bold">Phase 1: User Stories</h3>
+          <p class="text-base-content/70">Define requirements in plain English</p>
+        </div>
+      </div>
+
+      <div class="ml-16 space-y-4">
+        <div>
+          <h4 class="font-semibold mb-2">What You Create</h4>
+          <p class="text-sm text-base-content/70"><code class="bg-base-200 px-2 py-1 rounded">user_stories.md</code> with acceptance criteria</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-4">
+          <div class="card bg-base-200">
+            <div class="card-body">
+              <h5 class="font-semibold mb-2">Manual</h5>
+              <p class="text-sm mb-2">Write stories yourself or interview with AI</p>
+              <ul class="text-sm list-disc list-inside space-y-1 text-base-content/70">
+                <li>Create user_stories.md in your repo</li>
+                <li>Interview yourself about requirements</li>
+                <li>Write stories in 'As a... I want... So that...' format</li>
+                <li>Add specific, testable acceptance criteria</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="card bg-base-200">
+            <div class="card-body">
+              <h5 class="font-semibold mb-2">Automated</h5>
+              <p class="text-sm mb-2">Stories MCP Server handles interviews and generation</p>
+              <ul class="text-sm list-disc list-inside space-y-1 text-base-content/70">
+                <li>AI interviews you about requirements with structured PM persona</li>
+                <li>AI creates stories in database with full version history</li>
+                <li>AI reviews stories for quality and completeness on demand</li>
+                <li>Link stories to components automatically during design</li>
+                <li>Track status (in_progress, completed, dirty) throughout lifecycle</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Phase 2 -->
+    <div class="mb-12">
+      <div class="flex items-center gap-4 mb-4">
+        <div class="text-4xl">🗺️</div>
+        <div>
+          <h3 class="text-2xl font-heading font-bold">Phase 2: Context Mapping</h3>
+          <p class="text-base-content/70">Map stories to Phoenix contexts</p>
+        </div>
+      </div>
+
+      <div class="ml-16 space-y-4">
+        <div>
+          <h4 class="font-semibold mb-2">What You Create</h4>
+          <p class="text-sm text-base-content/70">Context boundaries, entity ownership, dependency graph</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-4">
+          <div class="card bg-base-200">
+            <div class="card-body">
+              <h5 class="font-semibold mb-2">Manual</h5>
+              <p class="text-sm mb-2">Map stories to Phoenix contexts using vertical slice architecture</p>
+              <ul class="text-sm list-disc list-inside space-y-1 text-base-content/70">
+                <li>Group stories by entity ownership</li>
+                <li>Apply business capability grouping within entity boundaries</li>
+                <li>Keep contexts flat (no nested contexts)</li>
+                <li>Identify components within each context</li>
+                <li>Map dependencies between contexts</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="card bg-base-200">
+            <div class="card-body">
+              <h5 class="font-semibold mb-2">Automated</h5>
+              <p class="text-sm mb-2">Architect MCP Server guides context design and validates dependencies</p>
+              <ul class="text-sm list-disc list-inside space-y-1 text-base-content/70">
+                <li>AI interviews you about architecture with structured architect persona</li>
+                <li>AI creates domain and coordination contexts in database</li>
+                <li>AI validates dependencies and detects circular references</li>
+                <li>Link stories to contexts automatically during design</li>
+                <li>Track architectural health (orphaned contexts, dependency depth)</li>
+                <li>Review architecture quality on demand with best practices validation</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Phase 3 -->
+    <div class="mb-12">
+      <div class="flex items-center gap-4 mb-4">
+        <div class="text-4xl">📐</div>
+        <div>
+          <h3 class="text-2xl font-heading font-bold">Phase 3: Design Documents</h3>
+          <p class="text-base-content/70">Write specifications that control AI context</p>
+        </div>
+      </div>
+
+      <div class="ml-16 space-y-4">
+        <div>
+          <h4 class="font-semibold mb-2">What You Create</h4>
+          <p class="text-sm text-base-content/70">Structured markdown specs (purpose, entities, API, components, dependencies)</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-4">
+          <div class="card bg-base-200">
+            <div class="card-body">
+              <h5 class="font-semibold mb-2">Manual</h5>
+              <p class="text-sm mb-2">Write design docs following template structure</p>
+              <ul class="text-sm list-disc list-inside space-y-1 text-base-content/70">
+                <li>Create docs/design/{app_name}/{context_name}.md</li>
+                <li>Follow template structure (purpose, entities, access patterns, etc.)</li>
+                <li>Be specific about behavior, edge cases, error handling</li>
+                <li>Include acceptance criteria from relevant user stories</li>
+                <li>List every component (file) that needs to be implemented</li>
+                <li>Paste design document into AI context before asking for code</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="card bg-base-200">
+            <div class="card-body">
+              <h5 class="font-semibold mb-2">Automated</h5>
+              <p class="text-sm mb-2">Design Sessions orchestrator generates validated designs from architecture</p>
+              <ul class="text-sm list-disc list-inside space-y-1 text-base-content/70">
+                <li>AI generates context design from architecture and user stories</li>
+                <li>System validates design against schema (required sections, dependencies)</li>
+                <li>AI revises if validation fails, loops until design passes</li>
+                <li>System spawns parallel component design sessions</li>
+                <li>All designs committed to git with clear audit trail</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Phase 4 -->
+    <div class="mb-12">
+      <div class="flex items-center gap-4 mb-4">
+        <div class="text-4xl">🧪</div>
+        <div>
+          <h3 class="text-2xl font-heading font-bold">Phase 4: Test Generation</h3>
+          <p class="text-base-content/70">Generate tests from design documents</p>
+        </div>
+      </div>
+
+      <div class="ml-16 space-y-4">
+        <div>
+          <h4 class="font-semibold mb-2">What You Create</h4>
+          <p class="text-sm text-base-content/70">Test files, fixtures, integration tests</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-4">
+          <div class="card bg-base-200">
+            <div class="card-body">
+              <h5 class="font-semibold mb-2">Manual</h5>
+              <p class="text-sm mb-2">Write tests from design docs before implementation</p>
+              <ul class="text-sm list-disc list-inside space-y-1 text-base-content/70">
+                <li>Read design document</li>
+                <li>Write tests for each component's public API</li>
+                <li>Include edge cases and error scenarios from acceptance criteria</li>
+                <li>Create fixtures for test data</li>
+                <li>Run tests (they should fail - no implementation yet)</li>
+                <li>Paste design doc + failing tests into AI context for implementation</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="card bg-base-200">
+            <div class="card-body">
+              <h5 class="font-semibold mb-2">Automated</h5>
+              <p class="text-sm text-base-content/70">Component Test Sessions orchestrator generates and validates tests (Coming Soon)</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Phase 5 -->
+    <div class="mb-12">
+      <div class="flex items-center gap-4 mb-4">
+        <div class="text-4xl">⚡</div>
+        <div>
+          <h3 class="text-2xl font-heading font-bold">Phase 5: Code Generation</h3>
+          <p class="text-base-content/70">Generate code that makes tests pass</p>
+        </div>
+      </div>
+
+      <div class="ml-16 space-y-4">
+        <div>
+          <h4 class="font-semibold mb-2">What You Create</h4>
+          <p class="text-sm text-base-content/70">Implementation that passes tests</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-4">
+          <div class="card bg-base-200">
+            <div class="card-body">
+              <h5 class="font-semibold mb-2">Manual</h5>
+              <p class="text-sm mb-2">Paste design + tests into LLM, iterate until green</p>
+              <ul class="text-sm list-disc list-inside space-y-1 text-base-content/70">
+                <li>Paste design document into AI context</li>
+                <li>Paste failing tests into AI context</li>
+                <li>Ask AI to implement each component following the design</li>
+                <li>Run tests</li>
+                <li>If tests fail, paste errors back to AI and ask for fixes</li>
+                <li>Iterate until all tests pass</li>
+                <li>Commit with clear message referencing design doc and tests</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="card bg-base-200">
+            <div class="card-body">
+              <h5 class="font-semibold mb-2">Automated</h5>
+              <p class="text-sm text-base-content/70">Component Coding Sessions orchestrator implements and iterates until green (Coming Soon)</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- The Proof -->
+  <div class="mb-20">
+    <h2 class="text-3xl font-heading font-bold mb-6">The Proof</h2>
+    <p class="text-lg mb-4">
+      I built CodeMySpec using this method. The codebase is the proof.
+    </p>
+    <div class="card bg-base-200">
+      <div class="card-body">
+        <ul class="list-disc list-inside space-y-2">
+          <li>Stories context: Generated from design docs</li>
+          <li>Components context: Generated from design docs</li>
+          <li>Sessions orchestration: Generated from design docs</li>
+          <li>MCP servers: Generated from design docs</li>
+          <li>This entire application: Built with the product</li>
+        </ul>
+        <p class="mt-4">Every module links back to a design document. Every design document links back to user stories.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Getting Started -->
+  <div class="mb-20" id="manual">
+    <h2 class="text-3xl font-heading font-bold mb-8">Getting Started</h2>
+
+    <div class="grid md:grid-cols-2 gap-8">
+      <div class="card bg-base-200">
+        <div class="card-body">
+          <h3 class="card-title">Manual Process</h3>
+          <p class="text-sm text-base-content/70 mb-4">Learn the methodology, works with any framework</p>
+          <p class="font-semibold mb-4">2-4 hours to learn</p>
+
+          <h4 class="font-semibold mb-2">Best for:</h4>
+          <ul class="text-sm list-disc list-inside space-y-1 mb-4 text-base-content/70">
+            <li>Learning the method</li>
+            <li>Non-Phoenix projects</li>
+            <li>Small projects</li>
+            <li>Prefer more control</li>
+          </ul>
+
+          <h4 class="font-semibold mb-2">Steps:</h4>
+          <ol class="text-sm list-decimal list-inside space-y-1 mb-4 text-base-content/70">
+            <li>Read "Managing User Stories" guide</li>
+            <li>Create user_stories.md</li>
+            <li>Map contexts</li>
+            <li>Write one design doc</li>
+            <li>Write tests</li>
+            <li>Generate code with design + tests</li>
+          </ol>
+
+          <a href={~p"/docs"} class="btn btn-outline btn-sm">Start with Manual Process</a>
+        </div>
+      </div>
+
+      <div class="card bg-base-200" id="automation">
+        <div class="card-body">
+          <h3 class="card-title">Automated Workflow</h3>
+          <p class="text-sm text-base-content/70 mb-4">Full automation with CodeMySpec, Phoenix/Elixir only</p>
+          <p class="font-semibold mb-4">30 minutes setup</p>
+
+          <h4 class="font-semibold mb-2">Best for:</h4>
+          <ul class="text-sm list-disc list-inside space-y-1 mb-4 text-base-content/70">
+            <li>Phoenix/Elixir projects</li>
+            <li>Want maximum speed</li>
+            <li>Trust the automated workflow</li>
+            <li>Medium/large projects</li>
+          </ul>
+
+          <h4 class="font-semibold mb-2">Steps:</h4>
+          <ol class="text-sm list-decimal list-inside space-y-1 mb-4 text-base-content/70">
+            <li>Install CodeMySpec</li>
+            <li>Run setup session</li>
+            <li>Interview generates stories</li>
+            <li>Review generated designs</li>
+            <li>Approve and generate code</li>
+          </ol>
+
+          <a href={~p"/app"} class="btn btn-primary btn-sm">Try CodeMySpec</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FAQ -->
+  <div class="mb-20">
+    <h2 class="text-3xl font-heading font-bold mb-8">FAQ</h2>
+
+    <div class="space-y-6">
+      <div>
+        <h3 class="font-semibold mb-2">What if requirements change?</h3>
+        <p class="text-sm text-base-content/70">
+          Update stories → regenerate designs → update tests → regenerate code. Version control shows impact. The process supports change.
+        </p>
+      </div>
+
+      <div>
+        <h3 class="font-semibold mb-2">What about other frameworks?</h3>
+        <p class="text-sm text-base-content/70">
+          Manual process works anywhere. Automation is Phoenix/Elixir only (for now).
+        </p>
+      </div>
+
+      <div>
+        <h3 class="font-semibold mb-2">Do I need MCP servers?</h3>
+        <p class="text-sm text-base-content/70">
+          No. Manual process is copy-paste. MCP removes tedium.
+        </p>
+      </div>
+
+      <div>
+        <h3 class="font-semibold mb-2">How is this different from Cursor/Windsurf/etc?</h3>
+        <p class="text-sm text-base-content/70">
+          They optimize prompts. This controls context. Different approach.
+        </p>
+      </div>
+
+      <div>
+        <h3 class="font-semibold mb-2">What if AI still generates wrong code?</h3>
+        <p class="text-sm text-base-content/70">
+          Tests catch it. Iterate until green. If repeatedly failing, refine design. Tests are the validation gate.
+        </p>
+      </div>
+
+      <div>
+        <h3 class="font-semibold mb-2">Isn't this a lot of overhead?</h3>
+        <p class="text-sm text-base-content/70">
+          Less overhead than refactoring AI-generated technical debt. Manual process takes time; automation removes overhead.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Related Content -->
+  <div>
+    <h2 class="text-3xl font-heading font-bold mb-6">Related Content</h2>
+
+    <div class="grid md:grid-cols-2 gap-6">
+      <div>
+        <h3 class="font-semibold mb-3">Main Quest</h3>
+        <ul class="space-y-2 text-sm">
+          <li><a href={~p"/docs"} class="link">Managing User Stories</a></li>
+          <li><a href={~p"/docs"} class="link">Context Mapping for AI Development</a></li>
+          <li><a href={~p"/docs"} class="link">Writing Design Documents for AI</a></li>
+          <li><span class="text-base-content/50">Complete Workflow Walkthrough (Coming Soon)</span></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="font-semibold mb-3">Side Quest</h3>
+        <ul class="space-y-2 text-sm">
+          <li><a href={~p"/docs"} class="link">Stories - AI-Managed Requirements</a></li>
+          <li><a href={~p"/docs"} class="link">Architect - AI-Guided Context Design</a></li>
+          <li><a href={~p"/docs"} class="link">Design Sessions - AI-Generated Specifications</a></li>
+          <li><span class="text-base-content/50">Building a Components MCP Server (Coming Soon)</span></li>
+          <li><span class="text-base-content/50">Session Orchestration in Phoenix (Coming Soon)</span></li>
+          <li><span class="text-base-content/50">CodeMySpec Product Introduction (Coming Soon)</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,36 @@
+<div class="min-h-screen flex flex-col">
+  <header class="border-b border-base-300">
+    <nav class="navbar max-w-7xl mx-auto">
+      <div class="flex-1">
+        <a href={~p"/"} class="btn btn-ghost text-xl">
+          <img src={~p"/images/cms-logo.svg"} alt="CodeMySpec" class="h-8 w-8" />
+          CodeMySpec
+        </a>
+      </div>
+      <div class="flex-none">
+        <ul class="menu menu-horizontal px-1">
+          <li><a href={~p"/"}>Product</a></li>
+          <li><a href={~p"/method"}>Method</a></li>
+          <li><a href={~p"/blog"}>Blog</a></li>
+          <li><a href={~p"/docs"}>Docs</a></li>
+        </ul>
+      </div>
+      <div class="flex-none">
+        <a href={~p"/log-in"} class="btn btn-ghost">Log in</a>
+        <a href={~p"/app"} class="btn btn-primary">Open workspace</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="flex-1">
+    <%= @inner_content %>
+  </main>
+
+  <footer class="border-t border-base-300">
+    <div class="max-w-7xl mx-auto px-6 py-6 text-sm text-base-content/70">
+      <div>© <%= Date.utc_today().year %> CodeMySpec</div>
+      <div>Built for Phoenix devs who actually care about architecture.</div>
+    </div>
+  </footer>
+</div>
+

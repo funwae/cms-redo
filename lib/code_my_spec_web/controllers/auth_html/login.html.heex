@@ -1,0 +1,22 @@
+<div class="max-w-md mx-auto px-6 py-16">
+  <h1 class="text-3xl font-heading font-bold mb-8">Log in</h1>
+  <.form for={%{}} action={~p"/log-in"} class="space-y-4">
+    <div>
+      <label class="label">
+        <span class="label-text">Email</span>
+      </label>
+      <input type="email" name="email" class="input input-bordered w-full" />
+    </div>
+    <div>
+      <label class="label">
+        <span class="label-text">Password</span>
+      </label>
+      <input type="password" name="password" class="input input-bordered w-full" />
+    </div>
+    <button type="submit" class="btn btn-primary w-full">Log in</button>
+  </.form>
+  <p class="text-center mt-4 text-sm text-base-content/70">
+    Don't have an account? <a href={~p"/register"} class="link">Register</a>
+  </p>
+</div>
+

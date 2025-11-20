@@ -1,0 +1,33 @@
+# fly.toml app configuration file
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+
+app = "code-my-spec"  # Change this to your preferred app name
+primary_region = "iad"  # Change to your preferred region
+
+[build]
+
+[env]
+  MIX_ENV = "prod"
+  PHX_HOST = "code-my-spec.fly.dev"
+  DATABASE_PATH = "/data/code_my_spec_prod.db"
+
+[http_service]
+  internal_port = 4000
+  force_https = true
+  auto_stop_machines = true
+  auto_start_machines = true
+  min_machines_running = 0
+  processes = ["app"]
+
+[[vm]]
+  cpu_kind = "shared"
+  cpus = 1
+  memory_mb = 512
+
+[[mounts]]
+  source = "code_my_spec_data"
+  destination = "/data"
+
+[release_command]
+  command = "/app/bin/code_my_spec eval 'CodeMySpec.Release.migrate()'"
+
